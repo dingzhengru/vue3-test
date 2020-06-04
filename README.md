@@ -10,6 +10,13 @@ npm i
 npm run dev
 ```
 
+## 測試功能
+* component
+  * emit 事件宣告，傳送事件，驗證功能
+* teleport 將區塊傳送至指定目標，指定目標是用 id 
+* computed
+* watch
+
 > Minimal webpack setup for Vue 3 (beta) 
 
 This is for preview purposes only. There might be bugs and undocumented behavior differences from v2, which are expected.

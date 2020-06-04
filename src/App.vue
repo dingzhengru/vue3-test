@@ -35,11 +35,20 @@
   <button @click="watchedObject.name = watchedObject.name + '!'">改變 watchedObject</button>
   <span>{{ watchedObject }}</span>
 
+  <hr>
+  <h3>Style slot content</h3>
+  <AppModal>
+    <template v-slot:content>
+      <p>v-slot: content</p>
+    </template>
+  </AppModal>
+
 </template>
 
 <script>
 import { ref, computed, watch, onMounted } from 'vue';
 import AppButton from './AppButton.vue';
+import AppModal from './AppModal.vue';
 
 export default {
   setup() {
@@ -81,16 +90,12 @@ export default {
     }
   },
   components: {
-    AppButton
+    AppButton,
+    AppModal
   }
 }
 </script>
 
 <style scoped>
-img {
-  width: 200px;
-}
-h1 {
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 </style>
